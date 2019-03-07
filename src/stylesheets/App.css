@@ -1,0 +1,25 @@
+.App {
+  width: 100%;
+  background-color: #FBFBFB;
+}
+
+.App > h1 {
+  margin: 1rem;
+}
+
+.app-header {
+  height: 70px;
+  border-bottom: 1px solid #AAA;
+}
+
+.app-body {
+  display: flex;
+}
+
+.left {
+  width: 30%;
+}
+
+.right {
+  width: 70%;
+}

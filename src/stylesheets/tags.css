@@ -1,0 +1,18 @@
+.tags {
+  padding: 0;
+}
+
+.tag {
+  background-color: #FFA233;
+  color: white;
+  border-radius: 3px;
+  display: inline;
+  margin: 0 0.5rem 0 0;
+  padding: 4px 8px;
+  transform: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tag:hover {
+  background-color: #FF8B00;
+}

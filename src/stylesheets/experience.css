@@ -1,0 +1,23 @@
+.experience {
+  display: flex;
+}
+
+.experience > .dates {
+  font-style: italic;
+  font-weight: 600;
+  font-size: 12px;
+  margin-right: 1rem;
+}
+
+.experience > body {
+  font-size: 14px;
+}
+
+.experience .regular-weight {
+  font-weight: 500;
+}
+
+.experience h5 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+}
