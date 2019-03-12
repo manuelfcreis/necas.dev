@@ -1,25 +1,21 @@
-.App {
-  width: 100%;
-  background-color: #FBFBFB;
-}
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,800');
 
-.App > h1 {
-  margin: 1rem;
-}
-
-.app-header {
-  height: 70px;
-  border-bottom: 1px solid #AAA;
-}
-
-.app-body {
+.app {
+  width: 100vw;
+  background-color: #E63946;
+  height: 100vh;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  margin: 0;
 }
 
-.left {
-  width: 30%;
+a, p, h1, h2 {
+  font-family: 'Nunito Sans', sans-serif;
 }
 
-.right {
-  width: 70%;
+a {
+  color: #E63946;
 }
