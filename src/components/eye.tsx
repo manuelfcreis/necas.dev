@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../stylesheets/eye.css';
+import '../stylesheets/eye.scss';
 
 interface iProps {
   xPosition: number;
@@ -12,8 +12,6 @@ class Eye extends Component<iProps> {
   }
 
   render() {
-    console.log(window.innerHeight)
-    console.log(this.props.yPosition)
     const topValue = String(Math.round(
       (this.props.yPosition) / window.innerHeight * 100
     )) + '%';

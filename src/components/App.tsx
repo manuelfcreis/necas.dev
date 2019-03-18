@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Menu from './menu';
 import Eye from './eye';
 import Card from './card';
-import '../stylesheets/App.css';
+import '../stylesheets/App.scss';
 
 interface iState {
   xPosition: number;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../stylesheets/card.css';
+import '../stylesheets/card.scss';
 
 interface iProps {
   open: boolean;

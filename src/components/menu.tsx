@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../stylesheets/menu.css';
+import '../stylesheets/menu.scss';
 
 interface iProps {
   menuClick: any
