@@ -3,6 +3,9 @@ import Menu from './menu';
 import Eye from './eye';
 import Card from './card';
 import '../stylesheets/App.scss';
+// @ts-ignore
+import Div100vh from 'react-div-100vh';
+
 
 interface iState {
   xPosition: number;
@@ -46,11 +49,11 @@ class App extends Component<iProps, iState> {
 
   render() {
     return (
-      <div onClick={this.mouseMovement.bind(this)} onMouseMove={this.mouseMovement.bind(this)} className="app">
+      <Div100vh onClick={this.mouseMovement.bind(this)} onMouseMove={this.mouseMovement.bind(this)} className="app">
         <Menu menuClick={this.menuClick} />
         <Eye xPosition={this.state.xPosition} yPosition={this.state.yPosition} />
         <Card open={this.state.open} />
-      </div>
+      </Div100vh>
     );
   }
 }
