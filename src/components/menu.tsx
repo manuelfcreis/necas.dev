@@ -14,10 +14,10 @@ class Menu extends Component<iProps> {
             <p onClick={this.props.menuClick}>About me</p>
           </li>
           <li>
-            <a href='/resume.pdf'>Resume</a>
+            <a target='_blank' href='https://www.dropbox.com/s/9vlsiv339xoipzo/resume.pdf?dl=0'>Resume</a>
           </li>
           <li>
-            <a href='https://github.com/manuelfcreis'>Github</a>
+            <a target='_blank' href='https://github.com/manuelfcreis'>Github</a>
           </li>
         </ul>
       </div>
