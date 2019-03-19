@@ -46,7 +46,7 @@ class App extends Component<iProps, iState> {
 
   render() {
     return (
-      <div onMouseMove={this.mouseMovement.bind(this)} className="app">
+      <div onClick={this.mouseMovement.bind(this)} onMouseMove={this.mouseMovement.bind(this)} className="app">
         <Menu menuClick={this.menuClick} />
         <Eye xPosition={this.state.xPosition} yPosition={this.state.yPosition} />
         <Card open={this.state.open} />
