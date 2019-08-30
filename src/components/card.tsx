@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import '../stylesheets/card.scss';
+import SocialLink from './social_link'
 
 interface iProps {
   open: boolean;
 }
+
 class Card extends Component<iProps> {
   render() {
     const names = "card " + (this.props.open ? 'card--open' : 'card--closed');
@@ -13,9 +15,8 @@ class Card extends Component<iProps> {
         <div className={names}>
           <h2>Manuel <br />Costa Reis</h2>
           <ul className='iconList'>
-            <li><a className='icon' href='https://www.linkedin.com/in/manuelfcreis/' ><img src='assets/linkedin.png' alt='Linkedin' /></a></li>
-            {/* <li><a className='icon' href='#' ><img src='assets/instagram.png' alt='Instagram' /></a></li> */}
-            <li><a className='icon' href='https://twitter.com/ManuelCReis' ><img src='assets/twitter.png' alt='Twitter' /></a></li>
+            <SocialLink link="https://www.linkedin.com/in/manuelfcreis/" image="assets/linkedin.png" alt="Linkedin" />
+            <SocialLink link="https://twitter.com/ManuelCReis" image="assets/twitter.png" alt="Twitter" />
           </ul>
 
           <p>I'm Manuel: Programmer, Economist, Data Scientist and all around nerd.</p>
