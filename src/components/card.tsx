@@ -20,7 +20,7 @@ class Card extends Component<iProps> {
           </ul>
 
           <p>I'm Manuel: Programmer, Economist, Data Scientist and all around nerd.</p>
-          <p>Currently I'm a Data Scientist at<a href='https://landing.jobs'> Landing.jobs </a>
+          <p>Currently I'm a Data Scientist at<a href='https://casafari.com'> Casafari </a>
             and I'm looking to finish some side projects mostly related to Data Science, Deep Learning,
             and Gaming.</p>
           <p>I'm also a part-time farmer. 🐮</p>
