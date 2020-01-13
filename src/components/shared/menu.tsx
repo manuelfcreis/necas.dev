@@ -14,6 +14,9 @@ class Menu extends Component<iProps> {
             <p onClick={this.props.menuClick}>About me</p>
           </li>
           <li>
+            <a target='_blank' href='/Blog'>Blog</a>
+          </li>
+          <li>
             <a target='_blank' href='https://www.dropbox.com/s/9vlsiv339xoipzo/resume.pdf?dl=0'>Resume</a>
           </li>
           <li>
