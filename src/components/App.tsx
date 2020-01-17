@@ -1,15 +1,25 @@
 import React, { Component } from 'react';
-import Homepage from './homepage/homepage'
-import '../stylesheets/App.scss';
+import Menu from './shared/menu';
+import Card from './homepage/card';
+import Eye from './shared/eye';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 // @ts-ignore
 import Div100vh from 'react-div-100vh';
+import '../stylesheets/App.scss';
 
 
 
 interface iState {
-  xPosition: number;
-  yPosition: number;
+  positions: {
+    x: number;
+    y: number;
+  };
   open: boolean;
+  hideEye: boolean;
 }
 
 interface iProps {}
@@ -18,8 +28,11 @@ class App extends Component<iProps, iState> {
     super(props)
 
     this.state = {
-      xPosition: window.innerWidth / 2,
-      yPosition: window.innerHeight / 2,
+      hideEye: false,
+      positions: {
+        x: window.innerWidth / 2,
+        y: window.innerHeight / 2,
+      },
       open: false
     }
 
@@ -31,8 +44,10 @@ class App extends Component<iProps, iState> {
 
     this.setState(() => {
       return ({
-        xPosition: event.pageX,
-        yPosition: event.pageY
+        positions: {
+          x: event.pageX,
+          y: event.pageY
+        }
       })
     })
   }
@@ -47,15 +62,27 @@ class App extends Component<iProps, iState> {
 
   render() {
     return (
-      <Div100vh onClick={this.mouseMovement.bind(this)} onMouseMove={this.mouseMovement.bind(this)} className="app">
-        <Homepage
-          mouseMovement={this.mouseMovement}
-          menuClick={this.menuClick}
-          open={this.state.open}
-          xPosition={this.state.xPosition}
-          yPosition={this.state.yPosition}
-        />
-      </Div100vh>
+      <Router>
+        <Div100vh
+          onClick={this.mouseMovement.bind(this)}
+          onMouseMove={this.mouseMovement.bind(this)}
+          className="app"
+        >
+          <Menu positions={this.state.positions}/>
+
+          <Switch>
+            <Route path='/blog'>
+              Blog
+            </Route>
+            <Route path='/about'>
+              <Card open={true} />
+            </Route>
+            <Route path='/'>
+              <Eye small={false} positions={this.state.positions}/>
+            </Route>
+          </Switch>
+        </Div100vh>
+      </Router>
     );
   }
 }

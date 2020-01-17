@@ -1,20 +1,39 @@
 import React, { Component } from 'react';
-import '../stylesheets/menu.scss';
+import { Link, withRouter } from 'react-router-dom'
+import '../../stylesheets/shared/menu.scss';
+import Eye from './eye';
 
 interface iProps {
-  menuClick: any
+  positions: {
+    x: number;
+    y: number;
+  }
+  history: any;
+  location: any;
+  match: any;
+  staticContext?: any;
 }
 
 class Menu extends Component<iProps> {
   render() {
+    console.log()
     return (
       <div className="menu">
         <ul>
+          <Eye
+            small={true}
+            positions={this.props.positions}
+            hide={this.props.location.pathname =='/'}
+          />
           <li>
-            <p onClick={this.props.menuClick}>About me</p>
+            <Link to={this.props.location.pathname =='/about' ? '/' : '/about'}>
+              About me
+            </Link>
           </li>
           <li>
-            <a target='_blank' href='/Blog'>Blog</a>
+            <Link to={this.props.location.pathname =='/blog' ? '/' : '/blog'}>
+              Blog
+            </Link>
           </li>
           <li>
             <a target='_blank' href='https://www.dropbox.com/s/9vlsiv339xoipzo/resume.pdf?dl=0'>Resume</a>
@@ -28,4 +47,5 @@ class Menu extends Component<iProps> {
   }
 }
 
-export default Menu;
+const menuWithRouter = withRouter((props: iProps) => <Menu {...props}/>);
+export default menuWithRouter;

@@ -5,11 +5,11 @@
   background-color: #E63946;
   height: 100vh;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 0;
   font-family: 'Nunito Sans', sans-serif;
   margin: 0;
+  position: relative;
 }
 
 a, p, h1, h2 {
@@ -17,7 +17,7 @@ a, p, h1, h2 {
 }
 
 a {
-  color: #E63946;
+  color: #ccc;
 }
 
 @media screen and (max-width: 1024px) {

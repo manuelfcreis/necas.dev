@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
-import '../stylesheets/eye.scss';
+import '../../stylesheets/shared/eye.scss';
+import classnames from 'classnames';
 
 interface iProps {
-  xPosition: number;
-  yPosition: number;
+  small: boolean;
+  positions: {
+    x: number;
+    y: number;
+  }
+  hide?: boolean;
 }
 
 class Eye extends Component<iProps> {
@@ -13,15 +18,18 @@ class Eye extends Component<iProps> {
 
   render() {
     const topValue = String(Math.round(
-      (this.props.yPosition) / window.innerHeight * 100
+      (this.props.positions.y) / window.innerHeight * 100
     )) + '%';
     const leftValue = String(Math.round(
-      (this.props.xPosition) / window.innerWidth * 100
+      (this.props.positions.x) / window.innerWidth * 100
     )) + '%';
 
     return (
-      <div className="eye">
-        <div className='ball' style={{ 'top': topValue, 'left': leftValue }}>
+      <div hidden={this.props.hide} className={classnames("eye", this.props.small ? 'smallEye' : '')}>
+        <div
+          className='ball'
+          style={this.props.small ? {} : { 'top': topValue, 'left': leftValue }}
+        >
           <div className='iris' />
         </div>
       </div>

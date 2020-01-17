@@ -1,6 +1,6 @@
 .menu {
+  position: relative;
   height: calc(70vh - 4rem);
-  padding-left: 2rem;
   width: 20vw;
 
   ul {
@@ -16,8 +16,7 @@
     margin: 0;
     padding: 0;
   }
-  p,
-  a {
+  p, a {
     color: white;
     text-transform: uppercase;
     text-decoration: none;
@@ -36,12 +35,18 @@
     width: 100%;
     padding: 0;
     position: absolute;
+    padding-left: 45px;
     top: 1rem;
     ul {
       flex-direction: row;
       height: initial;
       width: 100vw;
       font-size: 16px;
+    }
+
+
+    &:has(.smallEye) {
+      padding-left: 0px;
     }
   }
 }
