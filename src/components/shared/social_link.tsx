@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 interface SocialLinkProps {
   link: string;
@@ -6,14 +6,14 @@ interface SocialLinkProps {
   alt: string;
 }
 
-const SocialLink = (props: SocialLinkProps) => {
+const SocialLink = (props: SocialLinkProps): JSX.Element => {
   return (
     <li>
-      <a className='icon' href={props.link} >
+      <a className="icon" href={props.link}>
         <img src={props.image} alt={props.alt} />
       </a>
     </li>
-  )
-}
+  );
+};
 
-export default SocialLink
+export default SocialLink;

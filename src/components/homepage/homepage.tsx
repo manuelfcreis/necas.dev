@@ -1,24 +1,22 @@
 import React, { Component } from 'react';
 import Card from './card';
-// @ts-ignore
-import Div100vh from 'react-div-100vh';
 
-interface iProps {
+interface Props {
   mouseMovement: Function;
   open: boolean;
   positions: {
     x: number;
     y: number;
-  }
+  };
 }
 
-class Homepage extends Component<iProps> {
-  render() {
+class Homepage extends Component<Props> {
+  render(): JSX.Element {
     return (
       <>
         <Card open={this.props.open} />
       </>
-    )
+    );
   }
 }
 

@@ -2,35 +2,38 @@ import React, { Component } from 'react';
 import '../../stylesheets/shared/eye.scss';
 import classnames from 'classnames';
 
-interface iProps {
+interface Props {
   small: boolean;
   positions: {
     x: number;
     y: number;
-  }
+  };
   hide?: boolean;
 }
 
-class Eye extends Component<iProps> {
-  constructor(props: iProps) {
+class Eye extends Component<Props> {
+  constructor(props: Props) {
     super(props);
   }
 
-  render() {
-    const topValue = String(Math.round(
-      (this.props.positions.y) / window.innerHeight * 100
-    )) + '%';
-    const leftValue = String(Math.round(
-      (this.props.positions.x) / window.innerWidth * 100
-    )) + '%';
+  render(): JSX.Element {
+    const topValue =
+      String(Math.round((this.props.positions.y / window.innerHeight) * 100)) +
+      '%';
+    const leftValue =
+      String(Math.round((this.props.positions.x / window.innerWidth) * 100)) +
+      '%';
 
     return (
-      <div hidden={this.props.hide} className={classnames("eye", this.props.small ? 'smallEye' : '')}>
+      <div
+        hidden={this.props.hide}
+        className={classnames('eye', this.props.small ? 'smallEye' : '')}
+      >
         <div
-          className='ball'
-          style={this.props.small ? {} : { 'top': topValue, 'left': leftValue }}
+          className="ball"
+          style={this.props.small ? {} : { top: topValue, left: leftValue }}
         >
-          <div className='iris' />
+          <div className="iris" />
         </div>
       </div>
     );

@@ -1211,6 +1211,13 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"
   integrity sha512-ce5d3q03Ex0sy4R14722Rmt6MT07Ua+k4FwDfdcToYJcMKNtRVQvJ6JCAPdAmAnbRb6CsX6aYb9m96NGod9uTw==
 
+"@types/react-div-100vh@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@types/react-div-100vh/-/react-div-100vh-0.3.0.tgz#3146b567304c6d9587f340fdb4b6e612596f07ad"
+  integrity sha512-ooouxtvbj+mP/OmdAh91+huVECechS2Svb55zTWMaRPXIG4XXL4+TESR7navmm6kvlnZRhDNb7/2qUOTrQm17g==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-dom@^16.8.2":
   version "16.9.4"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.9.4.tgz#0b58df09a60961dcb77f62d4f1832427513420df"

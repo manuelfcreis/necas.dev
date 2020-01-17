@@ -13,7 +13,12 @@
     "jest": true
   },
   "rules": {
-    "prettier/prettier": ["error", { "singleQuote": true }]
+    "prettier/prettier": ["error", {
+      "singleQuote": true,
+      "trailingComma": "es5"
+    }],
+    "@typescript-eslint/no-explicit-any": "off",
+    "comma-dangle": ["error", "always-multiline"]
   },
   "settings": {
     "react": {
