@@ -26,8 +26,11 @@ class Eye extends Component<Props> {
 
     return (
       <div
-        hidden={this.props.hide}
-        className={classnames('eye', this.props.small ? 'smallEye' : '')}
+        className={classnames(
+          'eye',
+          this.props.small ? 'smallEye' : '',
+          this.props.hide ? 'invisible' : ''
+        )}
       >
         <div
           className="ball"

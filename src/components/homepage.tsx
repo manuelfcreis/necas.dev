@@ -1,22 +1,16 @@
 import React, { Component } from 'react';
-import Card from './card';
+import Eye from './shared/eye';
 
 interface Props {
-  mouseMovement: Function;
-  open: boolean;
   positions: {
     x: number;
     y: number;
   };
+  small: boolean;
 }
-
 class Homepage extends Component<Props> {
   render(): JSX.Element {
-    return (
-      <>
-        <Card open={this.props.open} />
-      </>
-    );
+    return <Eye small={false} positions={this.props.positions} />;
   }
 }
 

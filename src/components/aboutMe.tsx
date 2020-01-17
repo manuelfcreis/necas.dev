@@ -1,17 +1,11 @@
 import React, { Component } from 'react';
-import '../../stylesheets/homepage/card.scss';
-import SocialLink from '../shared/social_link';
+import SocialLink from './shared/social_link';
+import Card from './shared/card';
 
-interface Props {
-  open: boolean;
-}
-
-class Card extends Component<Props> {
+class AboutMe extends Component<{}> {
   render(): JSX.Element {
-    const names = 'card ' + (this.props.open ? 'card--open' : 'card--closed');
-
     return (
-      <div className={names}>
+      <Card>
         <h2>Manuel Costa Reis</h2>
         <ul className="iconList">
           <SocialLink
@@ -37,9 +31,9 @@ class Card extends Component<Props> {
           &nbsp;and I&apos;m looking to finish some side projects mostly related
           to Data Science, Deep Learning, and Gaming.
         </p>
-      </div>
+      </Card>
     );
   }
 }
 
-export default Card;
+export default AboutMe;

@@ -12,6 +12,10 @@
   box-shadow: 5px 5px 10px rgba(0,0,0,0.4),
               -5px -5px 10px rgba(0,0,0,0.3) inset;
 
+  &.invisible {
+    visibility: hidden;
+  }
+
   &.smallEye {
     position: absolute;
     border-width: 2px;
@@ -49,7 +53,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    background-color: #457B9D;
+    background-color: rgb(101, 157, 192);
     transform: translate(-50%, -50%);
     box-shadow: 2px 2px 5px rgba(0,0,0,0.4),
                 -5px -5px 10px rgba(0,0,0,0.3) inset;

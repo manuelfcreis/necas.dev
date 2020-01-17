@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import Menu from './shared/menu';
-import Card from './homepage/card';
-import Eye from './shared/eye';
+import AboutMe from './aboutMe';
+import Blog from './blog';
+import Homepage from './homepage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Div100vh from 'react-div-100vh';
 import '../stylesheets/App.scss';
+
 
 interface State {
   positions: {
@@ -62,12 +64,10 @@ class App extends Component<{}, State> {
         >
           <Menu positions={this.state.positions} />
           <Switch>
-            <Route path="/blog">Blog</Route>
-            <Route path="/about">
-              <Card open={true} />
-            </Route>
+            <Route path="/blog" component={Blog} />
+            <Route path="/about" component={AboutMe} />
             <Route path="/">
-              <Eye small={false} positions={this.state.positions} />
+              <Homepage small={false} positions={this.state.positions} />
             </Route>
           </Switch>
         </Div100vh>
