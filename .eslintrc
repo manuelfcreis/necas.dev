@@ -14,7 +14,6 @@
   },
   "rules": {
     "prettier/prettier": ["error", {
-      "singleQuote": true,
       "trailingComma": "es5"
     }],
     "@typescript-eslint/no-explicit-any": "off",
