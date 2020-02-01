@@ -9,7 +9,10 @@ interface PostProps {
   file: any;
 }
 
-const filePaths = require.context("../blog/", true, /\.md$/).keys();
+const filePaths =
+  process.env.NODE_ENV === "test"
+    ? []
+    : require.context("../blog/", true, /\.md$/).keys();
 
 const files = filePaths.reverse().map(path => {
   return require("../blog/" + path.replace("./", ""));

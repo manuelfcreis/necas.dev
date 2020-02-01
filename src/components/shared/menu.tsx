@@ -14,7 +14,7 @@ interface Props {
   staticContext?: any;
 }
 
-class Menu extends Component<Props> {
+export class Menu extends Component<Props> {
   render(): JSX.Element {
     return (
       <div className="menu">

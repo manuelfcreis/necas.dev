@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <menuWithRouter
+    location={
+      Object {
+        "pathname": "/",
+      }
+    }
+    positions={
+      Object {
+        "x": 50,
+        "y": 50,
+      }
+    }
+  />
+</Router>
+`;
+
+exports[`renders correctly 2`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <menuWithRouter
+    location={
+      Object {
+        "pathname": "about",
+      }
+    }
+    positions={
+      Object {
+        "x": 50,
+        "y": 50,
+      }
+    }
+  />
+</Router>
+`;
+
+exports[`renders correctly 3`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <menuWithRouter
+    location={
+      Object {
+        "pathname": "blog",
+      }
+    }
+    positions={
+      Object {
+        "x": 50,
+        "y": 50,
+      }
+    }
+  />
+</Router>
+`;
+
+exports[`renders correctly 4`] = `
+<div
+  className="menu"
+>
+  <ul>
+    <Eye
+      hide={false}
+      positions={
+        Object {
+          "x": 50,
+          "y": 50,
+        }
+      }
+      small={true}
+    />
+    <li>
+      <Link
+        to="/about"
+      >
+        About me
+      </Link>
+    </li>
+    <li>
+      <Link
+        to="/blog"
+      >
+        Blog
+      </Link>
+    </li>
+    <li>
+      <a
+        href="https://www.dropbox.com/s/9vlsiv339xoipzo/resume.pdf?dl=0"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Resume
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://github.com/manuelfcreis"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Github
+      </a>
+    </li>
+  </ul>
+</div>
+`;

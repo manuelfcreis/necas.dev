@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="eye"
+>
+  <div
+    className="ball"
+    style={
+      Object {
+        "left": "80%",
+        "top": "80%",
+      }
+    }
+  >
+    <div
+      className="iris"
+    />
+  </div>
+</div>
+`;
