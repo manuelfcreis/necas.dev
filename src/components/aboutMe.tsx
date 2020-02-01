@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import SocialLink from "./shared/social_link";
+import SocialLink from "./shared/socialLink";
 import Card from "./shared/card";
 import "../stylesheets/aboutMe.scss";
 
