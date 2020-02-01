@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Card from './shared/card';
+import React, { Component } from "react";
+import Card from "./shared/card";
 
 interface Props {
   open: boolean;
@@ -9,10 +9,10 @@ interface PostProps {
   file: any;
 }
 
-const filePaths = require.context('../blog/', true, /\.md$/).keys();
+const filePaths = require.context("../blog/", true, /\.md$/).keys();
 
 const files = filePaths.reverse().map(path => {
-  return require('../blog/' + path.replace('./', ''));
+  return require("../blog/" + path.replace("./", ""));
 });
 
 class Blog extends Component<Props> {

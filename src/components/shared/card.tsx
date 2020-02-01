@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import '../../stylesheets/shared/card.scss';
+import React, { Component } from "react";
+import "../../stylesheets/shared/card.scss";
 
 class Card extends Component<{}> {
   render(): JSX.Element {

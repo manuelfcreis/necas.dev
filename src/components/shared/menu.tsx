@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
-import '../../stylesheets/shared/menu.scss';
-import Eye from './eye';
+import React, { Component } from "react";
+import { Link, withRouter } from "react-router-dom";
+import "../../stylesheets/shared/menu.scss";
+import Eye from "./eye";
 
 interface Props {
   positions: {
@@ -22,17 +22,17 @@ class Menu extends Component<Props> {
           <Eye
             small={true}
             positions={this.props.positions}
-            hide={this.props.location.pathname == '/'}
+            hide={this.props.location.pathname == "/"}
           />
           <li>
             <Link
-              to={this.props.location.pathname == '/about' ? '/' : '/about'}
+              to={this.props.location.pathname == "/about" ? "/" : "/about"}
             >
               About me
             </Link>
           </li>
           <li>
-            <Link to={this.props.location.pathname == '/blog' ? '/' : '/blog'}>
+            <Link to={this.props.location.pathname == "/blog" ? "/" : "/blog"}>
               Blog
             </Link>
           </li>

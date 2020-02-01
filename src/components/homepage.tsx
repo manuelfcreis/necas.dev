@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Eye from './shared/eye';
+import React, { Component } from "react";
+import Eye from "./shared/eye";
 
 interface Props {
   positions: {

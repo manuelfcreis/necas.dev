@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import Menu from './shared/menu';
-import AboutMe from './aboutMe';
-import Blog from './blog';
-import Homepage from './homepage';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Div100vh from 'react-div-100vh';
-import '../stylesheets/App.scss';
-
+import React, { Component } from "react";
+import Menu from "./shared/menu";
+import AboutMe from "./aboutMe";
+import Blog from "./blog";
+import Homepage from "./homepage";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Div100vh from "react-div-100vh";
+import "../stylesheets/App.scss";
 
 interface State {
   positions: {
