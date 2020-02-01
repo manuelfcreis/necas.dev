@@ -31,6 +31,15 @@
   }
 }
 
+.eye-container:contains(.invisible) {
+  position: absolute;
+}
+
+.eye-container {
+  position: relative;
+  width: 50px;
+}
+
 @media screen and (max-width: 1024px) {
   .menu {
     height: initial;

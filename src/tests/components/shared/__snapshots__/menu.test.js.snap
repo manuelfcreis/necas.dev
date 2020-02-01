@@ -122,16 +122,20 @@ exports[`renders correctly 4`] = `
   className="menu"
 >
   <ul>
-    <Eye
-      hide={false}
-      positions={
-        Object {
-          "x": 50,
-          "y": 50,
+    <div
+      className="eye-container"
+    >
+      <Eye
+        hide={false}
+        positions={
+          Object {
+            "x": 50,
+            "y": 50,
+          }
         }
-      }
-      small={true}
-    />
+        small={true}
+      />
+    </div>
     <li>
       <Link
         to="/about"

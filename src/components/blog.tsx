@@ -69,7 +69,7 @@ class Blog extends Component<{}, State> {
     }
 
     return (
-      <Card classes="blogContainer">
+      <Card classes="container">
         {files.map((file, index) => {
           return (
             <BlogPost

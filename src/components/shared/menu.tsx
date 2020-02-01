@@ -19,11 +19,13 @@ export class Menu extends Component<Props> {
     return (
       <div className="menu">
         <ul>
-          <Eye
-            small={true}
-            positions={this.props.positions}
-            hide={this.props.location.pathname == "/"}
-          />
+          <div className="eye-container">
+            <Eye
+              small={true}
+              positions={this.props.positions}
+              hide={this.props.location.pathname == "/"}
+            />
+          </div>
           <li>
             <Link
               to={this.props.location.pathname == "/about" ? "/" : "/about"}

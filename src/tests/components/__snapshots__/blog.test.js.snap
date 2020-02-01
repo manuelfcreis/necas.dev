@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <Card
-  classes="blogContainer"
+  classes="container"
 >
   <div
     className="pagination"
