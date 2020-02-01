@@ -1,0 +1,17 @@
+.blogContainer {
+  max-height: 90vh;
+  overflow-y: scroll;
+  margin-top: 4rem 1.5rem 0 0;
+
+  .blogpost {
+    margin-bottom: 4rem;
+    padding: 1rem 1rem;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1rem 8rem;
+    width: 100%;
+  }
+}

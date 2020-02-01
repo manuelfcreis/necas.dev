@@ -40,15 +40,18 @@ class AboutMe extends Component<{}> {
             <strong>Data science</strong> is for me a mixture of both
             development and economics. I end up gravitating towards it as I
             enjoy both implementing products in code but also trying to use data
-            as a source for making decision.
+            as a source for making decisions.
           </li>
           <li>
-            I listen to a lot of podcasts and audiobooks -{" "}
-            <em>Over 65 days of recorded listening.</em>
+            I listen to a lot of podcasts and audiobooks - currently over 65
+            days of recorded listening.
           </li>
           <li>
-            I&apos;m very interested in music, namely collecting vinyl and in
-            cinema. I host a weekly cinema club at my place.
+            I&apos;m very interested in music. I&apos;m always looking for new
+            things, currently I&apos;m listening to a lot of spiritual jazz,
+            city-pop and disco. I&apos;m also very into cinema, host a weekly
+            cinema club and I keep trying to learn more about cinematography and
+            general technique at my place.
           </li>
           <li>
             Besides all this reading ends up being one of my favorite
