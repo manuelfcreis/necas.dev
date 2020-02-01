@@ -40,6 +40,9 @@ const cssModuleRegex = /\.module\.css$/;
 const sassRegex = /\.(scss|sass)$/;
 const sassModuleRegex = /\.module\.(scss|sass)$/;
 
+// Markdown Regex
+const markdownRegex = /\.md$/;
+
 // This is the production and development configuration.
 // It is focused on developer experience, fast rebuilds, and a minimal bundle.
 module.exports = function(webpackEnv) {
@@ -452,6 +455,21 @@ module.exports = function(webpackEnv) {
                 },
                 'sass-loader'
               ),
+            },
+            {
+              test: markdownRegex,
+              use: [
+                {
+                    loader: "html-loader"
+                },
+                {
+                    loader: "markdown-loader",
+                }
+            ]
+              // Exclude `js` files to keep "css" loader working as it injects
+              // its runtime that would otherwise be processed through "file" loader.
+              // Also exclude `html` and `json` extensions so they get processed
+              // by webpacks internal loaders.
             },
             // "file" loader makes sure those assets get served by WebpackDevServer.
             // When you `import` an asset, you get its (virtual) filename.

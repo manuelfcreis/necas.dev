@@ -1,33 +1,18 @@
-.cardContainer {
-  width: 24vw;
-  overflow: hidden;
-  margin-right: -4rem;
-}
-
 .card {
-  height: calc(70vh - 4rem);
-  border: 5px solid black;
+  color: white;
   border-radius: 5px;
-  padding: 1rem 9rem 1rem 2rem;
-  background-color: white;
-  margin-right: -4rem;
-  position: relative;
-  left: 25vw;
+  padding: 1rem 2rem;
   transition: 0.3s;
   transition-timing-function: ease-out;
-  overflow-y: scroll;
+
+  hr {
+    border-top: white;
+  }
 
   h2 {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 28px;
-  }
-
-  &.card--open {
-    transition-timing-function: ease-in;
-    transition: 0.3s;
-    transform: translateX(-25vw);
-    overflow-y: scroll;
   }
 
   .iconList {
@@ -39,10 +24,16 @@
   .iconList li {
     display: inline;
     margin-right: 1rem;
-  }
 
-  .icon:hover {
-    opacity: 0.7;
+    .icon {
+      &:hover {
+        opacity: 0.7;
+      }
+
+      img {
+        height: 30px;
+      }
+    }
   }
 }
 
@@ -52,18 +43,11 @@
     top: 3.5rem;
     left: 0;
     width: 100%;
-    height: calc(100% - 3.5rem);
 
     .card {
       height: 100%;
       margin: 0;
       padding: 1rem 2rem;
-      top: 100vh;
-      left:0;
-
-      &.card--open {
-        transform: translateY(-100vh);
-      }
     }
   }
 }
@@ -75,19 +59,11 @@
     top: 3.5rem;
     left: 0;
     width: 100%;
-    height: calc(100% - 3.5rem);
 
     .card {
       height: 100%;
       margin: 0;
       padding: 1rem 2rem;
-      top: 100vh;
-      left: 0;
-
-      &.card--open {
-        transform: translateX(0);
-        transform: translateY(-40vh);
-      }
     }
   }
 }

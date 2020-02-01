@@ -1,59 +1,76 @@
-import React, { Component } from 'react';
-import Menu from './menu';
-import Eye from './eye';
-import Card from './card';
-import '../stylesheets/App.scss';
-// @ts-ignore
-import Div100vh from 'react-div-100vh';
+import React, { Component } from "react";
+import Menu from "./shared/menu";
+import AboutMe from "./aboutMe";
+import Blog from "./blog";
+import Homepage from "./homepage";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Div100vh from "react-div-100vh";
+import "../stylesheets/App.scss";
 
-
-interface iState {
-  xPosition: number;
-  yPosition: number;
+interface State {
+  positions: {
+    x: number;
+    y: number;
+  };
   open: boolean;
+  hideEye: boolean;
 }
 
-interface iProps { }
-
-class App extends Component<iProps, iState> {
-  constructor(props: iProps) {
-    super(props)
+class App extends Component<{}, State> {
+  constructor(props: {}) {
+    super(props);
 
     this.state = {
-      xPosition: window.innerWidth / 2,
-      yPosition: window.innerHeight / 2,
-      open: false
-    }
+      hideEye: false,
+      positions: {
+        x: window.innerWidth / 2,
+        y: window.innerHeight / 2,
+      },
+      open: false,
+    };
 
-    this.menuClick = this.menuClick.bind(this)
+    this.menuClick = this.menuClick.bind(this);
   }
 
-  mouseMovement(event: any) {
-    event.persist()
+  mouseMovement(event: any): void {
+    event.persist();
 
     this.setState(() => {
-      return ({
-        xPosition: event.pageX,
-        yPosition: event.pageY
-      })
-    })
+      return {
+        positions: {
+          x: event.pageX,
+          y: event.pageY,
+        },
+      };
+    });
   }
 
-  menuClick() {
-    this.setState((prevState) => {
-      return ({
-        open: !prevState.open
-      })
-    })
+  menuClick(): void {
+    this.setState(prevState => {
+      return {
+        open: !prevState.open,
+      };
+    });
   }
 
-  render() {
+  render(): JSX.Element {
     return (
-      <Div100vh onClick={this.mouseMovement.bind(this)} onMouseMove={this.mouseMovement.bind(this)} className="app">
-        <Menu menuClick={this.menuClick} />
-        <Eye xPosition={this.state.xPosition} yPosition={this.state.yPosition} />
-        <Card open={this.state.open} />
-      </Div100vh>
+      <Router>
+        <Div100vh
+          onClick={this.mouseMovement.bind(this)}
+          onMouseMove={this.mouseMovement.bind(this)}
+          className="app"
+        >
+          <Menu positions={this.state.positions} />
+          <Switch>
+            <Route path="/blog" component={Blog} />
+            <Route path="/about" component={AboutMe} />
+            <Route path="/">
+              <Homepage small={false} positions={this.state.positions} />
+            </Route>
+          </Switch>
+        </Div100vh>
+      </Router>
     );
   }
 }

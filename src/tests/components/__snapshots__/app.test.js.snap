@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<BrowserRouter>
+  <Div100vh
+    className="app"
+    onClick={[Function]}
+    onMouseMove={[Function]}
+  >
+    <withRouter()
+      positions={
+        Object {
+          "x": 512,
+          "y": 384,
+        }
+      }
+    />
+    <Switch>
+      <Route
+        component={[Function]}
+        path="/blog"
+      />
+      <Route
+        component={[Function]}
+        path="/about"
+      />
+      <Route
+        path="/"
+      >
+        <Homepage
+          positions={
+            Object {
+              "x": 512,
+              "y": 384,
+            }
+          }
+          small={false}
+        />
+      </Route>
+    </Switch>
+  </Div100vh>
+</BrowserRouter>
+`;
