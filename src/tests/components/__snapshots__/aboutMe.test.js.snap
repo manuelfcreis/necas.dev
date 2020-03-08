@@ -12,11 +12,6 @@ exports[`renders correctly 1`] = `
       className="iconList"
     >
       <SocialLink
-        alt="Linkedin"
-        image="assets/linkedin.png"
-        link="https://www.linkedin.com/in/manuelfcreis/"
-      />
-      <SocialLink
         alt="Twitter"
         image="assets/twitter.png"
         link="https://twitter.com/ManuelCReis"
