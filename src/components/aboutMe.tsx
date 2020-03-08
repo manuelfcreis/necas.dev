@@ -23,18 +23,11 @@ class AboutMe extends Component<{}> {
           </ul>
 
           <hr />
-          <p>
-            Hi, I&apos;m Manuel Costa Reis and this is my personal website.
-            <br />
-            <br />
-            <strong>About me:</strong>
-          </p>
           <ul className="summary">
-            <li>I&apos;m currently a data scientist at Casafari.</li>
             <li>
-              I have previously worked as a{" "}
-              <strong>full-stack software developer</strong>, as an{" "}
-              <strong>economist</strong> and I&apos;ve had my own start-up,
+              I'm a{" "}
+              full-stack software developer, data scientist, {" "}
+              economist and I&apos;ve had my own start-up,
               dedicated to podcasts.
             </li>
             <li>
@@ -44,22 +37,16 @@ class AboutMe extends Component<{}> {
               data as a source for making decisions.
             </li>
             <li>
-              I listen to a lot of podcasts and audiobooks - currently over 65
-              days of recorded listening.
+              I listen to a lot of podcasts and audiobooks.
             </li>
             <li>
               I&apos;m very interested in music. I&apos;m always looking for new
-              things, currently I&apos;m listening to a lot of spiritual jazz,
-              city-pop and disco. I&apos;m also very into cinema, host a weekly
-              cinema club and I keep trying to learn more about cinematography
-              and general technique at my place.
+              things. I&apos;m also very into cinema, host a weekly
+              cinema club and I keep trying to learn more about cinematography and cinema history.
             </li>
             <li>
               Besides all this reading ends up being one of my favorite
-              activities. Both fiction and non-fiction. The best books I&apos;ve
-              read recently are <em>East of Eden</em> by John Steinbeck,{" "}
-              <em>What I talk when I talk about running</em> by Haruki Murakami,{" "}
-              and <em>Other minds</em> by Peter Godfrey-Smith.
+              activities. Both fiction and non-fiction. I try to vary between the two.
             </li>
             <li>I have a very large dog. 🐶</li>
           </ul>
